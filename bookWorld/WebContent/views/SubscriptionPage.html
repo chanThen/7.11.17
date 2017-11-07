@@ -1,0 +1,51 @@
+<div class="col-md-12" id="subscriptionPage">
+	<h2>Subscription Page</h2>
+	<form id="formId" method="post" action="/signin" class="form-horizontal"
+		role="form" align="center">
+		<div class="form-group" align="center">
+			<label class="control-label col-md-4" for="username">UserName</label>
+			<div class="col-sm-3">
+				<input type="text" name="username" id="username"
+					placeholder="username" required="true" ng-model="username" class="form-control" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-md-4" for="password">Phone
+				Number<em>*</em>
+			</label>
+			<div class="col-sm-3">
+				<input type="number" name="PhoneNumber" ng-model="phonenumber" placeholder="phoneNumber"
+					required="true" class="form-control" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-md-4" for="Account Number">Account Number<em>*</em>
+			</label>
+			<div class="col-sm-3">
+				<input type="text " name="accountNumber" ng-model="accountnumber" placeholder="Account Number"
+					required="true" class="form-control" />
+			</div>
+		</div>
+		<div class="row">
+		<div class="form-group">
+		<label class="control-label col-md-4" for="Account Number">CardType<em>*</em> </label>
+  			<div id="buttonId" class="col-md-4">
+    			<div class="form-group">
+      				<select class="selectpicker form-control">
+        				<option value="paytym" ng-model="cardtype" >Paytym</option>
+       					<option value="Debit Card" ng-model="cardtype" >Debit Card</option>
+        				<option value="Rupey" ng-model="cardtype" >Rupey</option>
+      				</select>
+   				</div>
+  			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-3">
+				<input type="submit" value="subscribe" ng-click="payToSubscribe()"
+					class="btn btn-success" />
+			</div>
+		</div>
+		
+	</form>
+</div>
+

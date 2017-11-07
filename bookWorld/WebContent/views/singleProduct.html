@@ -1,0 +1,49 @@
+<div style="color: black; font-style: italic" class="container-fluid">
+	<div class="col-sm-4">
+		<div class="thumbnail">
+			<img class="imageStyle" src={{data.imagePath}} alt="Lights">
+		</div>
+		<h4>Leave a Comment:</h4>
+		<form class="status" role="form">
+			<div class="form-group">
+				<textarea id="commentbox"
+					style="resize: vertical; font-weight: bold" class="form-control"
+					rows="3" ng-model="comment" required></textarea>
+			</div>
+			<strong>Rating:</strong> <label class="radio-inline"> <input
+				type="radio" name="optradio" value="1" ng-model="rating"> 1
+			</label> <label class="radio-inline"> <input type="radio"
+				name="optradio" value="2" ng-model="rating"> 2
+			</label> <label class="radio-inline"> <input type="radio"
+				name="optradio" value="3" ng-model="rating"> 3
+			</label><label class="radio-inline"> <input type="radio"
+				name="optradio" value="4" ng-model="rating"> 4
+			</label><label class="radio-inline"> <input type="radio"
+				name="optradio" value="5" ng-model="rating"> 5
+			</label>
+			<button ng-click="addToReview()" class="btn btn-success">Submit</button>
+		</form>
+	</div>
+	<div class="col-sm-8">
+		<div style="font-size: 150%;; text-align: center;" class="row content">
+			<h2>{{data.bookName}}</h2>
+			<p class="text-justify">{{data.bookDescription}}</p>
+		</div>
+		<div class="row content">
+			<div>
+				<a>Authour Name :</a>{{data.author}}
+			</div>
+			<br> <br>
+			<button ng-click="addToWishList()" class="btn btn-success">Add
+				To Favourite</button>
+		</div>
+		<h2>Comments</h2>
+		<div style="color: black" ng-repeat="review in reviewdata"
+			class="row content">
+			<ul style="text-align: justify" class="list-group">
+				<li class="list-group-item"><strong>UserName :</strong> {{review.name}} &nbsp &nbsp Ratings:{{review.bookRating}}</li>
+				<li class="list-group-item"><strong>{{review.bookComment}}</strong></li>
+			</ul>
+		</div>
+	</div>
+</div>

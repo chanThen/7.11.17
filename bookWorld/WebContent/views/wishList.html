@@ -1,0 +1,12 @@
+<div ng-repeat="data in data" class="col-sm-3"  style="color:black;font-style: italic" class="container-fluid">
+	
+	
+		<div id={{data.bookDetail.bookId}} class="thumbnail">
+			<img src={{data.bookDetail.imagePath}} alt="Image" style="width:50% ;height:50%">		
+			<br><strong>Author: {{data.bookDetail.author}}</strong>
+			<button ng-click="removeFromWishList(data.wishListId)" class="btn btn-danger">Remove from WishList</button>
+		</div>
+	<br>
+</div>
+
+

@@ -1,0 +1,8 @@
+  <div style="display: table-row;"ng-repeat="category in category" class="col-md-4">
+      <div ng-click="getProductById(category.categoryId)" class="thumbnail">
+         <img  class="imageStyle" src={{category.categoryImage}} alt="Lights" >
+         <div class="caption">
+            <h3 text-align="center">{{category.bookCategoryName}}</h3>
+         </div>
+     </div>
+    </div>

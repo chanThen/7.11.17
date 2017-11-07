@@ -1,0 +1,12 @@
+<div ng-repeat="data in subscribedData" class="col-sm-3"  style="color:black;font-style: italic" class="container-fluid">
+	
+	
+		<div class="thumbnail">
+			<img src={{data.bookDetail.imagePath}} alt="Image" style="width:50% ;height:50%">		
+			<br><strong>Author: {{data.bookDetail.author}}</strong>
+			<div><button ng-click="viewDetails(data.bookDetail.bookId)" class="btn btn-success">View Detail</button></div>
+		</div>
+	<br>
+</div>
+
+

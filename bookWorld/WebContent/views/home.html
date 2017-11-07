@@ -1,0 +1,26 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>     
+        <span class="icon-bar"></span>                   
+      </button>
+      <a class="navbar-brand">Book World</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul  class="nav navbar-nav">
+        <li><a  ui-sref='root.dashBoard.aboutpage'>About</a></li>
+        <li><a  ui-sref='root.dashBoard.categorypage'>Categories</a></li>
+        <li><a  ui-sref='root.dashBoard.wishlistpage'>My WishList</a></li>
+        <li><a  ui-sref='root.dashBoard.subscribedPage'>Subscribed Books</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a ui-sref='root.index'><span ></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div ui-view></div>

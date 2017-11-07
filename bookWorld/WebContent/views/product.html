@@ -1,0 +1,26 @@
+
+<div>
+	<div class="row">
+	<input type="text" class="form-control" ng-model="searchtext" placeholder="Search for the books">
+	<span class="glyphicon glyphicon-search fa-4x"></span>
+	</div>
+	<div class="row">
+
+		<div ng-repeat="products in products | filter:{categoryId:categoryid} | filter:searchtext "
+			class="col-md-3">
+			<div class="thumbnail">
+				<img class="imageStyle" src={{products.imagePath}} alt="Lights">
+				<div class="caption">
+					<p>{{products.bookName}}</p>
+					<div><button
+							ng-click="checkForSubscription(products.bookId)"
+							class="btn btn-success">Subscribe</button></div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Thumbnail div ng-click="getParticularDetail(products.bookId)" -->
